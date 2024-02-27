@@ -1,0 +1,29 @@
+{
+  "editor.wordWrap": "on",
+  "editor.fontSize": 14.2,
+  "editor.lineHeight": 19,
+  "editor.tabSize": 2,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  // explorer
+  "explorer.compactFolders": false,
+  // workbench
+  "workbench.editor.enablePreview": false,
+  "workbench.iconTheme": "symbols",
+  "material-icon-theme.folders.associations": {
+    "Aside": "stack"
+  },
+  // terminal
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.profiles.windows": {
+    "Git Bash": {
+      "source": "Git Bash"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "window.zoomLevel": -1.8,
+  "liveServer.settings.port": 5501,
+}
