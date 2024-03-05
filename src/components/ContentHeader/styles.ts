@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface IContainerProps {
+  lineColor: string;
+}
+
 export const Container = styled.div`
 width: 100%;
 display: flex;
@@ -8,7 +12,7 @@ margin-bottom: 25px;
 
 `;
 
-export const TitleContainer = styled.div`
+export const TitleContainer = styled.div<IContainerProps>`
 
 > h3 {
 
@@ -19,7 +23,7 @@ export const TitleContainer = styled.div`
     content: '';
     display: block;
     width: 40px;
-    border-bottom: 4px solid rgb(255, 76, 76);
+    border-bottom: 4px solid ${props => props.lineColor};
   
   }
 }

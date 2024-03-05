@@ -5,28 +5,35 @@ export const Container = styled.div`
 grid-area: AS;
 background-color: ${props => props.theme.color.primary};
 color: rgb(255, 239, 0);
-padding-left: 20px;
+padding-left: 25px;
 border-right: 1px solid gray;
 `;
 
 export const Header = styled.div`
-display: flex;
-align-items: center;
-margin: 0.2rem 0 0 1.3rem;
+
+/* display: flex; */
+/* align-items: center; */
+/* margin: 0.2rem 0 0 1.3rem; */
 /* margin: 0.5rem 0 0 3.3rem; */
-`;
-export const LogoImg = styled.img`
-width:120px;
-height: 48px;
+margin: 3px 17px;
+
 `;
 
-export const Title = styled.h3``;
+export const LogoImg = styled.img`
+width: 118px;
+height: 47px;
+`;
+
+export const Title = styled.h3`
+/* color: white;
+margin-left: 1.2rem; */
+`;
 
 export const MenuContainer = styled.nav`
 display: flex;
 /* text-align: center; */
 flex-direction: column;
-margin-top: 35px;
+margin-top: 30px;
 `;
 
 export const MenuItemLink = styled.a`
@@ -39,8 +46,10 @@ align-items: center;
 margin: 8.5px 0;
 
 &:hover {
-  /* opacity: .5; */
+  /* opacity: .8; */
   color: rgb(255, 239, 0);
+  /* box-shadow: 0px 0px 9px 1px orange;
+  border-radius: 8px; */
 }
 
 > svg {

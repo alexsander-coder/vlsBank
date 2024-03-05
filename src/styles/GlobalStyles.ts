@@ -22,4 +22,18 @@ button {
   cursor: pointer;
 }
 
+  *::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #005dab;
+    border-radius: 3px;
+  }
+
+  /* 
+    background de dentro do scroll 
+  ::-webkit-scrollbar-track {
+    background-color: white;
+  } */
 `;

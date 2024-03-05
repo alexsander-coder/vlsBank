@@ -1,8 +1,9 @@
 import React from "react";
 import logo from '../../assets/vale-logo.png'
-import Toggle from "../Toggle";
+// import Toggle from "../Toggle";
 import { IoHome, IoCard } from 'react-icons/io5';
 import { FaMoneyBillTransfer, FaHandHoldingDollar, FaArrowUpLong, FaArrowDownLong } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 import { PiCardholderFill } from "react-icons/pi";
 import { MdOutlineCreditCardOff } from 'react-icons/md'
 import { IoNewspaper } from 'react-icons/io5'
@@ -16,42 +17,44 @@ const Aside: React.FC = () => {
   return (
     <Container>
       <Header>
-        <LogoImg src={logo} alt="Logo minha cateira" />
-        {/* <Title>ValeShop</Title> */}
+        <Link to="/">
+          <LogoImg src={logo} alt="Logo Vale Shop" />
+        </Link>
+        {/* <Title>Vale Shop</Title> */}
       </Header>
 
       <MenuContainer>
-        <MenuItemLink href="#">
+        <MenuItemLink as={Link} to="/home">
           <IoHome />
-          Inicio
+          Início
         </MenuItemLink>
         <MenuItemLink href="#">
           <FaMoneyBillTransfer />
-          Transferencias
+          Transferências
         </MenuItemLink>
-        <MenuItemLink href="#">
+        <MenuItemLink as={Link} to="/graphics">
           <VscGraphLine />
-          Graficos
+          Gráficos
         </MenuItemLink>
         <MenuItemLink href="#">
           <FaHandHoldingDollar />
           Gastos
         </MenuItemLink>
-        <MenuItemLink href="#">
+        <MenuItemLink as={Link} to="/list/entry-balance">
           <FaArrowUpLong />
           Entrada
         </MenuItemLink>
         <MenuItemLink href="#">
           <FaArrowDownLong />
-          Saida
+          Saída
         </MenuItemLink>
         <MenuItemLink href="#">
           <IoCard />
-          Cartoes
+          Cartões
         </MenuItemLink>
         <MenuItemLink href="#">
           <IoNewspaper />
-          Extrato
+          Transações
         </MenuItemLink>
         <MenuItemLink href="#">
           <MdOutlineCreditCardOff />
@@ -69,7 +72,7 @@ const Aside: React.FC = () => {
           <RxExit />
           Sair
         </MenuItemLink>
-        <Toggle />
+        {/* <Toggle /> */}
       </MenuContainer>
     </Container>
   )

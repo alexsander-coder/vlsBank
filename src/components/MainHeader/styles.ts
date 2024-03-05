@@ -19,4 +19,6 @@ export const UserName = styled.span`
 `;
 
 export const Welcome = styled.h4`
+/* margin-left: 65rem; */
 `;
+

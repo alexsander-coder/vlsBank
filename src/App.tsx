@@ -4,15 +4,15 @@ import GlobalStyles from "./styles/GlobalStyles";
 import Layout from "./components/Layout";
 import dark from "./styles/themes/dark";
 import light from "./styles/themes/light";
-import Dashboard from "./pages/Dashboard";
+import Routes from "./routes";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={light}>
       <GlobalStyles />
-      <Layout>
-        <Dashboard />
-      </Layout>
+      <Routes />
     </ThemeProvider>
   )
 }
