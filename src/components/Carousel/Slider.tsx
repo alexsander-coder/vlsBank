@@ -10,7 +10,14 @@ interface SliderContentProps {
   desc: string;
 }
 
+
 export default (props: any) => {
+  const [showDetails, setShowDetails] = useState(false);
+  const [showBalance, setShowBalance] = useState(true);
+
+  const [selectedMovIndex, setSelectedMovIndex] = useState<null | number>(null);
+
+
   const [activeSlide, setActiveSlide] = useState(props.activeSlide);
   const [startX, setStartX] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
@@ -89,6 +96,13 @@ export default (props: any) => {
       };
   };
 
+  const toggleBalanceVisibility = () => {
+    setShowBalance(!showBalance);
+  };
+
+  const selectMovItem = (index: number) => {
+    setSelectedMovIndex(index);
+  };
 
 
   return (
@@ -109,7 +123,7 @@ export default (props: any) => {
               className="slide"
               style={{
                 background: item.bgColor,
-                boxShadow: `0 1px 100px ${item.bgColor}30`,
+                boxShadow: `0 10px 100px ${item.bgColor}30`,
                 ...getStyles(i)
               }}
             >
@@ -126,22 +140,45 @@ export default (props: any) => {
         ))}
       </div>
 
-      {/* <div className="btns">
-        <FontAwesomeIcon
-          className="btn"
-          onClick={prev}
-          icon={faChevronLeft}
-          color="black"
-          size="1x"
-        />
-        <FontAwesomeIcon
-          className="btn"
-          onClick={next}
-          icon={faChevronRight}
-          color="black"
-          size="1x"
-        />
-      </div> */}
+      {showDetails && (
+        <div className="grid-container">
+          <div className="left-panel">
+            <div className="card">
+              <h3>Saldo</h3>
+              <p>R$ {showBalance ? props.data[activeSlide].saldo : "*****"}</p>
+              <button onClick={toggleBalanceVisibility}>{showBalance ? "Ocultar Saldo" : "Mostrar Saldo"}</button>
+            </div>
+            <div className="movimentacoes">
+              <h3>Últimas Movimentações</h3>
+              <div className="movimentacao-cards">
+                {props.data && props.data[activeSlide] && props.data[activeSlide].movimentacoes && (
+                  props.data[activeSlide].movimentacoes.map((mov: any, index: any) => (
+                    <div
+                      key={index}
+                      className="movimentacao-card"
+                      onClick={() => setSelectedMovIndex(index)}
+                    >
+                      <p>{mov.nome}: R$ {mov.valor}</p>
+                    </div>
+                  ))
+                )}
+              </div>
+            </div>
+          </div>
+          {selectedMovIndex !== null && (
+            <div className="detalhes-movimentacao">
+              <h4>Detalhes da Movimentação</h4>
+              <p>Movimentação: {props.data[activeSlide].movimentacoes[selectedMovIndex].nome}</p>
+              <p>Valor: R$ {props.data[activeSlide].movimentacoes[selectedMovIndex].valor}</p>
+              <p>Data: {props.data[activeSlide].movimentacoes[selectedMovIndex].data}</p>
+            </div>
+          )}
+        </div>
+      )}
+      <button onClick={() => setShowDetails(!showDetails)}>
+        {showDetails ? 'Esconder Detalhes' : 'Mostrar Detalhes'}
+      </button>
+
     </>
   );
 };

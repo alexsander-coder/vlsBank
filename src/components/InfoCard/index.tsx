@@ -12,14 +12,6 @@ import { Container } from './styles';
 const InfoCard: React.FC = () => {
   return (
     <Container>
-      <div>
-        <h2>Saldo: R$</h2>
-        <h3>Últimas Transações:</h3>
-
-        <ul>
-        </ul>
-
-      </div>
     </Container>
   );
 };

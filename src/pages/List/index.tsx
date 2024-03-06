@@ -7,7 +7,7 @@ import HistoryFinanceCard from "../../components/HistoryFinanceCard";
 import bkp from "../../repositories/bkp";
 
 
-interface IData {
+export interface IData {
     id: string,
     description: string;
     amountFormatted: string;

@@ -14,6 +14,7 @@ const HistoryFinanceCard: React.FC<IHistoryFinanceCardProps> = ({
   subTitle,
   amount
 }) => {
+
   const amountColor = amount.startsWith('-') ? 'red' : 'green';
 
   return (

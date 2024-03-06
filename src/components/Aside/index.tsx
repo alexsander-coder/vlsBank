@@ -17,7 +17,7 @@ const Aside: React.FC = () => {
   return (
     <Container>
       <Header>
-        <Link to="/">
+        <Link to="/home">
           <LogoImg src={logo} alt="Logo Vale Shop" />
         </Link>
         {/* <Title>Vale Shop</Title> */}

@@ -5,8 +5,11 @@ export default [
     title: "Mônica L.",
     desc: "3214 78964 4526 7785",
     saldo: 1241.55,
-    ultMov: ["Confi", "Posto BR", "Honda"],
-    valorUltMov: ["115.80", "77.45", "644.77"]
+    movimentacoes: [
+      { "nome": "Farmacia", "valor": "223.80", "data": "20/10/2024" },
+      { "nome": "Bar", "valor": "77.45", "data": "21/10/2024" },
+      { "nome": "Fiat", "valor": "311.77", "data": "22/10/2024" }
+    ]
   },
   {
     id: 2,
@@ -14,8 +17,11 @@ export default [
     title: "Alexsander H",
     desc: "9865 78541 1212 5487",
     saldo: 265,
-    ultMov: ["Eirelli", "Pão de Açúcar", "Barber"],
-    valorUltMov: ["15.80", "12.45", "6.77"]
+    movimentacoes: [
+      { "nome": "Padoca", "valor": "115.80", "data": "20/10/2024" },
+      { "nome": "BR", "valor": "44.11", "data": "21/10/2024" },
+      { "nome": "Tintas", "valor": "223.77", "data": "22/10/2024" }
+    ]
   },
   {
     id: 3,
@@ -23,8 +29,11 @@ export default [
     title: "Letícia G.",
     desc: "45632 654378 2138 9784",
     saldo: 9852.23,
-    ultMov: ["Supermercado K&K", "Veneza", "Super Adega"],
-    valorUltMov: ["125.80", "12.45", "658.77"]
+    movimentacoes: [
+      { "nome": "Ar Gelo", "valor": "115.80", "data": "20/10/2024" },
+      { "nome": "Brasal", "valor": "77.45", "data": "21/10/2024" },
+      { "nome": "Açougue", "valor": "644.77", "data": "22/10/2024" }
+    ]
   },
   {
     id: 4,
@@ -32,16 +41,22 @@ export default [
     title: "Amanda C.",
     desc: "45632 654378 2138 9784",
     saldo: 563.33,
-    ultMov: ["Supercei", "Comercio"],
-    valorUltMov: ["10.10", "18.77"]
+    movimentacoes: [
+      { "nome": "Confi", "valor": "23.80", "data": "20/10/2024" },
+      { "nome": "Posto BR", "valor": "31.44", "data": "21/10/2024" },
+      { "nome": "Honda", "valor": "7895.77", "data": "22/10/2024" }
+    ]
   },
   {
     id: 5,
     bgColor: "#ffa600",
     title: "Ana Pereira",
     desc: "9875 3247 2245 9784",
-    saldo: 10124.45,
-    ultMov: ["Eirelli", "São Mateus", "Churras"],
-    valorUltMov: ["15.80", "19.45", "67.77"]
+    saldo: 1124.45,
+    movimentacoes: [
+      { "nome": "Hotel", "valor": "115.80", "data": "20/10/2024" },
+      { "nome": "Distribuidora", "valor": "99.45", "data": "21/10/2024" },
+      { "nome": "Real Express", "valor": "33.21", "data": "22/10/2024" }
+    ]
   }
 ];
